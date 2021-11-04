@@ -11,42 +11,27 @@
 
     <script type="text/javascript">
 
-const add = function(num1, num2) {
-	return num1 + num2;
+const palindromes = function (str) {
+    let answer;
+    let original = str.toLowerCase().replace(/[^a-zA-Z]+/g, '').split("");
+ //   console.log("multi m " + original);
+
+    let arr = original.reverse();
+ /*   console.log("reversed string: " + arr);
+/*
+    console.log("original join: " +  original.join(""));
+    console.log("arr: " + arr.reverse().join(""));
+*/
+    if(original.toString() === arr.reverse().toString()) {
+        answer = true;
+    } else {
+        answer = false;
+    }
+    return answer;
 };
 
-const subtract = function(num1, num2) {
-	return num1 - num2;
-};
+palindromes("dragon");
 
-const sum = function(arr) {
-  let sum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    sum += arr[i];
-  }
-  return sum;
-};
-
-const multiply = function(arr) {
-  let multi = 1;
-  
-  for (let i = 0; i < arr.length-1; i++) {
-    multi *= arr[i];
-    return multi;
-  }
-};
-
-const power = function(num1, num2) {
-	return num1 ** num2;
-};
-
-const factorial = function(para) {
-  let fac = 1;
-  for (let i = 1; i <= para; i++){
-      fac *=i;
-  }
-  return fac;
-};
 
     </script>
 </body>
