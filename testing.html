@@ -11,27 +11,19 @@
 
     <script type="text/javascript">
 
-const palindromes = function (str) {
-    let answer;
-    let original = str.toLowerCase().replace(/[^a-zA-Z]+/g, '').split("");
- //   console.log("multi m " + original);
 
-    let arr = original.reverse();
- /*   console.log("reversed string: " + arr);
-/*
-    console.log("original join: " +  original.join(""));
-    console.log("arr: " + arr.reverse().join(""));
-*/
-    if(original.toString() === arr.reverse().toString()) {
-        answer = true;
-    } else {
-        answer = false;
-    }
-    return answer;
+const fibonacci = function(count) {
+  if (count < 0) return "OOPS";
+  if (count === 0) return 0;
+  let a = 0;
+  let b = 1;
+  for (let i = 1; i < count; i++) {
+    const temp = b;
+    b = a + b;
+    a = temp;
+  }
+  return b;
 };
-
-palindromes("dragon");
-
 
     </script>
 </body>
